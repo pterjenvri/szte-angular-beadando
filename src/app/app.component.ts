@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'szte-angular-beadando';
+  navbarVisible : boolean = false
+
+  toggleNavBar() {
+    this.navbarVisible = !this.navbarVisible
+  }
 }

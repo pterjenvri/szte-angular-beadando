@@ -1,0 +1,17 @@
+<mat-card class="observationCard">
+  <mat-card-title>{{ observation.category }} - {{ observation.issued | date: 'yyyy.MM.dd.' }}</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>Vérnyomást mérő személy: {{observation.performer}}</mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item>Vérnyomást mérő eszköz: {{observation.device}}</mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item>Mért érték: {{observation.systolicmmHgValue}}/{{observation.diastolicmmHgValue}}</mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item>Megjegyzés: {{observation.note}}</mat-list-item>
+    </mat-list>
+    </mat-card-content>
+</mat-card>
