@@ -1,39 +1,49 @@
-<mat-card>
-  <form [formGroup]="form">
-    <h3>Vérnyomás rögzítése</h3>
-    <mat-form-field class="max-width">
-      <mat-label>Kategória</mat-label>
-      <input matInput placeholder="Vérnyomás" formControlName="category" [readonly]="true">
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Mérés dátuma</mat-label>
-      <input matInput [matDatepicker]="picker" formControlName="issued">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Mérést végző személy neve</mat-label>
-      <input matInput placeholder="Kis Jakab" formControlName="performer" required>
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Szisztolés érték</mat-label>
-      <input matInput placeholder="120" formControlName="systolicmmHgValue" required>
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Diasztolés érték</mat-label>
-      <input matInput placeholder="80" formControlName="diastolicmmHgValue" required>
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Mérést végző eszköz tipusa</mat-label>
-      <input matInput placeholder="Hauser" formControlName="device" required>
-    </mat-form-field>
-    <mat-form-field class="max-width">
-      <mat-label>Feljegyzés</mat-label>
-      <input matInput placeholder="Szúr a szívem" formControlName="note" required>
-    </mat-form-field>
-    <div>
-      <button mat-button (click)="dialogRef.close()">Mégsem</button>
-      <button mat-button [mat-dialog-close]="form.value">Hozzáadás</button>
-    </div>
-  </form>
-</mat-card>
+<div class="grid">
+  <mat-card>
+    <form [formGroup]="form">
+      <h3>Vérnyomás rögzítése</h3>
+      <mat-form-field class="max-width">
+        <mat-label>Státusz</mat-label>
+        <input matInput formControlName="status" required>
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Kategória</mat-label>
+        <input matInput placeholder="Vérnyomás" formControlName="category" [readonly]="true">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Kód</mat-label>
+        <input matInput formControlName="code" required>
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Mérés dátuma</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="issued" [readonly]="true">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Mérést végző személy neve</mat-label>
+        <input matInput placeholder="Kis Jakab" formControlName="performer">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Szisztolés érték</mat-label>
+        <input matInput placeholder="120" formControlName="systolicmmHgValue">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Diasztolés érték</mat-label>
+        <input matInput placeholder="80" formControlName="diastolicmmHgValue">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Mérést végző eszköz tipusa</mat-label>
+        <input matInput placeholder="Hauser" formControlName="device">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Feljegyzés</mat-label>
+        <input matInput placeholder="Szúr a szívem" formControlName="note">
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="dialogRef.close()">Mégsem</button>
+        <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">{{buttonText}}</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

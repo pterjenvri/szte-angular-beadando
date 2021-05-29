@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {CrudService} from "../../services/crud.service";
-import {Observation} from "../../model/Observation";
+import {Observation} from "../../shared/models/Observation";
 import {AddObservationComponent} from "../../components/add-observation/add-observation.component";
 
 @Component({
@@ -18,6 +18,7 @@ export class VernyomasrogzitesComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddObservationComponent, {});
+    dialogRef.componentInstance.buttonText = 'Hozzáadás';
     dialogRef.afterClosed().subscribe((observation: Observation) => {
       console.log(observation);
       if (observation?.category) {

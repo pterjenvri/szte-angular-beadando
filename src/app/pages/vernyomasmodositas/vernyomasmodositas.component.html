@@ -1,1 +1,2 @@
-<p>vernyomasmodositas works!</p>
+<h1 *ngIf="observations.length === 0" style="text-align: center">Nincs rögzítve vérnyomás.</h1>
+<app-delete-observation *ngFor="let observation of observations" [observation]="observation" [buttonText]="'Módosítás'" (onButtonClick)="modifyObservation(observation)"></app-delete-observation>

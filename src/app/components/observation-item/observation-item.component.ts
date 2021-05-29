@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observation } from "../../model/Observation";
+import { Observation } from "../../shared/models/Observation";
 import firebase from "firebase";
 import Timestamp = firebase.firestore.Timestamp;
 

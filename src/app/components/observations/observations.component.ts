@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Observation} from "../../model/Observation";
+import {Observation} from "../../shared/models/Observation";
 
 @Component({
   selector: 'app-observations',

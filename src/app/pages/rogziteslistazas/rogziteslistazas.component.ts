@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CrudService} from "../../services/crud.service";
-import {Observation} from "../../model/Observation";
+import {Observation} from "../../shared/models/Observation";
 import {Observable} from "rxjs";
 
 @Component({

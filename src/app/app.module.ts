@@ -27,7 +27,9 @@ import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatNativeDateModule} from "@angular/material/core";
+import {MatNativeDateModule, MatOptionModule} from "@angular/material/core";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DeleteObservationComponent } from './components/delete-observation/delete-observation.component';
 
 
 @NgModule({
@@ -40,28 +42,31 @@ import {MatNativeDateModule} from "@angular/material/core";
     RogzitestorlesComponent,
     ObservationsComponent,
     ObservationItemComponent,
-    AddObservationComponent
+    AddObservationComponent,
+    DeleteObservationComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatButtonModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatInputModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatButtonModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatInputModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        FontAwesomeModule,
+        MatOptionModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

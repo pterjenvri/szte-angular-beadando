@@ -19,5 +19,8 @@
     <mat-list>
       <mat-list-item>Megjegyzés: {{observation.note}}</mat-list-item>
     </mat-list>
-    </mat-card-content>
+  </mat-card-content>
+  <mat-card-actions>
+    <button [ngStyle]="{'background-color':'purple'}" mat-button (click)="buttonClick(observation)">{{buttonText}}</button>
+  </mat-card-actions>
 </mat-card>
